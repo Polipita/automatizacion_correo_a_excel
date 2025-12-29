@@ -8,11 +8,13 @@ from email.utils import parseaddr
 
 
 load_dotenv()
-
+print("Inicial")
 IMAP_SERVER = os.getenv('IMAP_SERVER')
 EMAIL = os.getenv('EMAIL')
 PASSWORD = os.getenv('PASSWORD')
+
 hoy = datetime.now().strftime("%d-%b-%Y")
+
 lista_blanca = {"dogsmanga455@gmail.com",
                 "hualpablas5@gmail.com"}
 
@@ -32,7 +34,6 @@ def limpiarTexto(texto):
 
 
 
-mensaje_total =[]
 def procesar_correo():
     mail = imaplib.IMAP4_SSL(IMAP_SERVER)
     mail.login(EMAIL, PASSWORD)
