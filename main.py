@@ -6,7 +6,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from email.utils import parseaddr
 
-"asamalama"
+#asamalama
 
 load_dotenv()
 print("Inicial")
